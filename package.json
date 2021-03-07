@@ -3,13 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "start": "webpack --config webpack.server.js && webpack --config webpack.browser.js && node dist/server/main.js",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@vue/server-renderer": "^3.0.7",
     "core-js": "^3.6.5",
-    "vue": "^3.0.0"
+    "express": "^4.17.1",
+    "vue": "^3.0.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-merge": "^5.7.3",
+    "webpack-node-externals": "^2.5.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
